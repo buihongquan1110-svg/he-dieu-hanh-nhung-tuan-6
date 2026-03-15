@@ -147,4 +147,6 @@ echo 1 > /dev/myled
 ```bash
 echo 0 > /dev/myled
 ```
-- Kết quả thu được ảnh dưới đây:
+- Kết quả thu được ảnh dưới đấy:
+
+
