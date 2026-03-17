@@ -172,6 +172,8 @@ LED OFF
 <img width="2560" height="1920" alt="image" src="https://github.com/user-attachments/assets/197dd33c-6998-4c59-8261-dcbcbb7fdc6d" />
 <img width="2560" height="1920" alt="image" src="https://github.com/user-attachments/assets/72a24eb7-5d25-4f1c-ab83-f98ae00042b1" />
 
+- Kết quả lúc mô phỏng giả lập thử QEMU:
+<img width="953" height="1920" alt="image" src="https://github.com/user-attachments/assets/183ec86a-02e1-40e7-8123-44487de10ef3" />
 
 
 
