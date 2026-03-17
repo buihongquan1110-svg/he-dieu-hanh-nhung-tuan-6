@@ -151,15 +151,7 @@ Target packages → led-driver
 ```bash
 make
 ```
-## BƯỚC 8: KIỂM TRA SAU BUILD
-```bash
-ls output/target/lib/modules
-```
-- Phải có:
-```bash
-led_driver.ko
-```
-## BƯỚC 9: TEST KIỂM THỬ TRÊN BBB
+## BƯỚC 8: TEST KIỂM THỬ TRÊN BBB
 - Trong quá trình làm thì nhóm có sửa code và quy ước thành:
 ```bash
 0: LED OFF
