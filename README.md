@@ -169,22 +169,10 @@ make
 1: LED ON
 ```
 - Thu được kết quả dưới đây:
-```bash
-LED ON
-```
-<img width="2560" height="1920" alt="image" src="https://github.com/user-attachments/assets/ac2ea323-0a47-499c-896c-0b45c2c841ee" />
-<img width="1920" height="2560" alt="image" src="https://github.com/user-attachments/assets/13eb01c8-fe56-4bcc-9f87-eb68705c9400" />
-
-```bash
 
 
-LED OFF
-```
-<img width="2560" height="1920" alt="image" src="https://github.com/user-attachments/assets/197dd33c-6998-4c59-8261-dcbcbb7fdc6d" />
-<img width="2560" height="1920" alt="image" src="https://github.com/user-attachments/assets/72a24eb7-5d25-4f1c-ab83-f98ae00042b1" />
 
-- Kết quả lúc mô phỏng giả lập thử QEMU:
-<img width="953" height="1920" alt="image" src="https://github.com/user-attachments/assets/183ec86a-02e1-40e7-8123-44487de10ef3" />
 
+https://github.com/user-attachments/assets/f9976622-5af5-4f5a-8993-099a4a1e0547
 
 
