@@ -1,15 +1,26 @@
 # BÀI TẬP HỆ ĐIỀU HÀNH NHÚNG TUẦN 6 ỨNG DỤNG TỔNG HỢP
-## 1. MỤC TIÊU
-- Xây dựng một Linux Device Driver để mô phỏng điều khiển LED
-- Người dùng giao tiếp thông qua file:
-```bash
-/dev/myled
-```
-- Ghi dữ liệu vào device:
-```bash
-1 → LED ON
-0 → LED OFF
-```
+## 1. GIAO TIẾP VỚI DRIVER TỪ ỨNG DỤNG 
+- Nạp driver : Yêu cầu kernel load driver và driver này dùng để điều khiển LED qua
+  ```bash
+  modprobe leds-gpio
+- Kiểm tra xem đã tạo file tương ứng Led chưa
+  ```bash
+  ls /sys/class/leds/beaglebone:green:/
+- Tắt chế độ điều khiển tự động của LED và chuyển sang điều khiển thủ công
+  ```bash
+  echo none > /sys/class/leds/beaglebone:green:usr3/trigger
+- Bật LED
+  ```bash
+  echo 1 > /sys/class/leds/beaglebone:green:usr3/brightness
+- Tắt LED
+  ```bash
+  echo 0 > /sys/class/leds/beaglebone:green:usr3/brightness
+- Xem Led đang bật hay tắt bằng lệnh
+  ```bash
+  cat /sys/class/leds/beaglebone:green:usr3/brightness
+- Kết quả thu được
+  <img width="2560" height="1920" alt="image" src="https://github.com/user-attachments/assets/1077b980-e925-449f-8b7e-6e4cb91dfb29" />
+
 ## 2. CẤU TRÚC THƯ MỤC
 ```bash
 package/
