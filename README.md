@@ -21,7 +21,7 @@
 - Kết quả thu được
   <img width="2560" height="1920" alt="image" src="https://github.com/user-attachments/assets/1077b980-e925-449f-8b7e-6e4cb91dfb29" />
 
-# BÀI 2
+# BÀI 2  Viết chương trình giao tiếp
 ## 1. CẤU TRÚC THƯ MỤC
 ```bash
 package/
