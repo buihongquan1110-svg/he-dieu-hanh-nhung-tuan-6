@@ -176,4 +176,63 @@ make
 
 https://github.com/user-attachments/assets/f9976622-5af5-4f5a-8993-099a4a1e0547
 
+# BÀI 3 TỰ KHỞI ĐỘNG 
+- Cấu trúc thư mục bổ sung:
+package/led_driver/
+└── S99blynk
+- Trong thư mục package của bạn (package/led_driver/), hãy tạo thêm một file tên là S99blynk
+```bash
+#!/bin/sh
+
+case "$1" in
+  start)
+    echo "Starting Blynk_user2..."
+    # Chạy ngầm chương trình bằng dấu & để không làm treo quá trình boot
+    /usr/bin/Blynk_user2 &
+    ;;
+  stop)
+    echo "Stopping Blynk_user2..."
+    killall Blynk_user2
+    ;;
+  restart|reload)
+    $0 stop
+    $0 start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    exit 1
+esac
+
+exit 0
+```
+- Cập nhật file led_driver.mk
+
+- Sửa nội dung define BLYNK_USER2_INSTALL_TARGET_CMDS như sau:
+
+define BLYNK_USER2_INSTALL_TARGET_CMDS
+    # Cài đặt file thực thi
+    $(INSTALL) -D -m 0755 $(@D)/Blynk_user2 \
+        $(TARGET_DIR)/usr/bin/Blynk_user2
+    
+    # Cài đặt script khởi động (S99 để nó chạy sau cùng)
+    $(INSTALL) -D -m 0755 $(BR2_EXTERNAL_BLYNK_USER2_PATH)/S99blynk \
+        $(TARGET_DIR)/etc/init.d/S99blynk
+endef
+- Build lại
+
+- Build lại package: make blynk_user2-rebuild
+
+- Đóng gói Image: make
+
+- Flash thẻ nhớ và cắm nguồn cho BeagleBone Black.
+
+- Tắt tạm thời:
+```bash
+/etc/init.d/S99blynk stop
+```
+- Bật lại chương trình:
+```bash
+/etc/init.d/S99blynk start
+``
+
 
