@@ -21,7 +21,8 @@
 - Kết quả thu được
   <img width="2560" height="1920" alt="image" src="https://github.com/user-attachments/assets/1077b980-e925-449f-8b7e-6e4cb91dfb29" />
 
-## 2. CẤU TRÚC THƯ MỤC
+# BÀI 2
+## 1. CẤU TRÚC THƯ MỤC
 ```bash
 package/
 └── led-driver/
@@ -31,7 +32,7 @@ package/
         ├── led_driver.c
         └── Makefile
 ```
-## 3. CÁC BƯỚC LÀM
+## 2. CÁC BƯỚC LÀM
 ### BƯỚC 1: TẠO THƯ MỤC PACKAGE
 ```bash
 cd ~/buildroot/package
