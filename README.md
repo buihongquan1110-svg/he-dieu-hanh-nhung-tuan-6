@@ -178,8 +178,10 @@ https://github.com/user-attachments/assets/f9976622-5af5-4f5a-8993-099a4a1e0547
 
 # BÀI 3 TỰ KHỞI ĐỘNG 
 - Cấu trúc thư mục bổ sung:
+```bash
 package/led_driver/
 └── S99blynk
+```
 - Trong thư mục package của bạn (package/led_driver/), hãy tạo thêm một file tên là S99blynk
 ```bash
 #!/bin/sh
