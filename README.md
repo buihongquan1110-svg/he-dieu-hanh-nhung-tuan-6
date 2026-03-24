@@ -233,6 +233,6 @@ endef
 - Bật lại chương trình:
 ```bash
 /etc/init.d/S99blynk start
-``
+```
 
 
